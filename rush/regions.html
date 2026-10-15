@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- หน้าเลือกภาค: วงกลมกลาง + 4 ภาค (ไม่ใช้ JavaScript) -->
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>เลือกภูมิภาค | Thai Street Food Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- เมนูบน/Footer ซ้ำทุกหน้า: แก้แล้วต้องแก้ทุกไฟล์ | class=on = ปุ่มส้มของหน้าปัจจุบัน -->
+<header><nav class="nav">
+  <a class="logo" href="index.html"> <b>Thai</b><small>Street Food Guide</small></a>
+  <div class="links"><a href="index.html">หน้าแรก</a><a href="regions.html" class=on>เมนูอาหาร</a><a href="home.html#shops">ร้านแนะนำ</a><a href="home.html#stories">บทความ</a><a href="home.html#about">เกี่ยวกับเรา</a></div>
+</nav></header>
+<main>
+  <h1 class="title">เลือกดูอาหารตามภูมิภาค</h1>
+  <p class="hint">กดที่ภาคที่สนใจเพื่อดูเมนูเด่น</p>
+  <!-- left/top เป็น % ของกรอบ | เส้นลูกศรใน <svg> ใช้พิกัด 100x60 ถ้าย้ายกล่องต้องแก้เส้นด้วย -->
+  <div class="map">
+    <svg viewBox="0 0 100 60">
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="ah" d="M0 0L10 5L0 10z"/></marker></defs>
+      <line x1="39.8" y1="24.6" x2="28.9" y2="18.8" marker-end="url(#ah)"/>
+      <line x1="39.8" y1="35.4" x2="28.9" y2="41.2" marker-end="url(#ah)"/>
+      <line x1="60.2" y1="35.4" x2="71.1" y2="41.2" marker-end="url(#ah)"/>
+      <line x1="60.2" y1="24.6" x2="71.1" y2="18.8" marker-end="url(#ah)"/>
+    </svg>
+    <div class="hub">เลือก<br>ภูมิภาค</div>
+    <a class="node" href="north.html" style="left:16%;top:20%;background:var(--north)"><i>🍜</i>เหนือ</a>
+    <a class="node" href="central.html" style="left:16%;top:80%;background:var(--central)"><i>🍲</i>กลาง</a>
+    <a class="node" href="isan.html" style="left:84%;top:80%;background:var(--isan)"><i>🥗</i>อีสาน</a>
+    <a class="node" href="south.html" style="left:84%;top:20%;background:var(--south)"><i>🦐</i>ใต้</a>
+  </div>
+</main>
+<footer>
+  <div class="foot">
+    <div><div class="flogo"> Thai Street Food Guide</div><p>คู่มือสตรีทฟู้ดไทย ค้นพบเมนูเด็ดจากทุกภูมิภาค ตั้งแต่เหนือจรดใต้</p></div>
+    <div><h3>เมนูลัด</h3><a href="index.html">หน้าแรก</a><a href="regions.html">เมนูอาหาร</a><a href="home.html#about">เกี่ยวกับเรา</a></div>
+    <div><h3>ภูมิภาค</h3><a href="north.html">ภาคเหนือ</a><a href="central.html">ภาคกลาง</a><a href="isan.html">ภาคอีสาน</a><a href="south.html">ภาคใต้</a></div>
+  </div>
+  <div class="copy">🌿 Thai Street Food Guide &nbsp;|&nbsp; กินเที่ยวทั่วไทย 🌿</div>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
