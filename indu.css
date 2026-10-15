@@ -1,0 +1,7 @@
+body,html{height:100%;margin:0}
+
+/* Parallax: ใช้คู่กับ class รูป เช่น .img12 | flex = จัดข้อความให้อยู่กลางจอ */
+.parallax{height:90%;background:center/cover no-repeat fixed;display:flex;justify-content:center;align-items:center}
+
+/* แต่ละรูปเป็น class แยก (ขึ้นต้นด้วยจุด) */
+.img12{background-image:url('/home/papiyapi/seve img/งาน.png')}
