@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="styleesheet" href="calc.css">
+
+</head>
+<body>
+    
+
+
+<div class="calculator-box">
+        <form id="calcForm">
+            <!-- ช่องกรอกตัวเลขฝั่งซ้าย -->
+            <input type="text" id="leftMember" placeholder="Left number">
+
+            <!-- กล่องเลือกเครื่องหมายคำนวณ -->
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+
+            <!-- ช่องกรอกตัวเลขฝั่งขวา -->
+            <input type="text" id="rightMember" placeholder="Right number">
+
+            <!-- ปุ่มกดส่งมูลค่าตามโจทย์ -->
+            <input type="submit" value="Try me!">
+        </form>
+    </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="calc.js">  
+</script>
+</body>
+</html>
