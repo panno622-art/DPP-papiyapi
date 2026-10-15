@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- หน้าแรก: Hero → ปุ่มวงกลมภูมิภาค → ไอคอน Dropdown → เกี่ยวกับเรา -->
+<html lang="th">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Thai Street Food Guide</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- เมนูบน: ซ้ำกันทุกหน้า ถ้าแก้เมนูต้องแก้ทุกไฟล์ .html (ค้นหาคำว่า <nav>) | class=on = ปุ่มสีส้มของหน้าปัจจุบัน (มีได้ปุ่มเดียวต่อหน้า) -->
+<header><nav class="nav">
+  <a class="logo" href="index.html"> <b>Thai</b><small>Street Food Guide</small></a>
+  <div class="links"><a href="index.html" class=on>หน้าแรก</a><a href="regions.html">เมนูอาหาร</a><a href="#shops">ร้านแนะนำ</a><a href="#stories">บทความ</a><a href="index.html#about">เกี่ยวกับเรา</a></div>
+</nav></header>
+
+<!-- Hero อยู่ตรงนี้ เพื่อกว้างเต็มจอ -->
+  <!-- Hero เต็มความกว้างจอ (อยู่นอก <main>): ซ้ายข้อความ ขวารูปอาหาร | เปลี่ยนรูป: แก้ src="images/hero-N.jpg" หรือวางไฟล์รูปใหม่ชื่อเดิมทับในโฟลเดอร์ images -->
+  <section class="hero">
+    <div class="slide on"><div><h1>อร่อยทั่วไทย<br>ไปกับเรา</h1><p>ค้นพบเมนูเด็ด จากทุกภูมิภาค</p></div>
+      <div class="art"><img src="/home/papiyapi/seve img/อาหาร.jpeg" alt="รวมเมนูเด็ดจาก 4 ภาค ได้แก่ ภาคเหนือ ภาคกลาง ภาคอีสาน และภาคใต้"></div></div>
+
+    <div class="slide"><div><h1>ผัดไทย<br>รสชาติต้นตำรับ</h1><p>เส้นเหนียวนุ่ม กุ้งสด มะนาวหอมๆ</p></div>
+      <div class="art"><img src="/home/papiyapi/seve img/ผัดไทย.jpeg" alt="ผัดไทยกุ้งสดเสิร์ฟบนใบตอง"></div></div>
+
+    <div class="slide"><div><h1>ส้มตำแซ่บ<br>สไตล์อีสาน</h1><p>เผ็ด เปรี้ยว เค็ม หวาน ครบรส</p></div>
+      <div class="art"><img src="/home/papiyapi/seve img/กลาง.jpeg" alt="ส้มตำรสแซ่บสไตล์อีสาน"></div></div>
+
+    <button class="arrow prev" aria-label="ก่อนหน้า"></button><button class="arrow next" aria-label="ถัดไป"></button>
+    <div class="dots"><button aria-label="สไลด์ 1" class=on></button><button aria-label="สไลด์ 2"></button><button aria-label="สไลด์ 3"></button></div>
+    
+  </section>
+
+
+<main>
+
+
+  <!-- วงกลมกลางหน้า: กดแล้วไปหน้า regions.html -->
+  <section class="region-cta">
+    <a class="big-circle" href="#regions-modal"><span>🍽️</span>อาหาร<br>ตามภูมิภาค</a>
+    <p class="hint">กดเพื่อเลือกดูอาหารแต่ละภาค</p>
+  </section>
+
+  <!-- Dropdown ไอคอน (CSS ล้วน ไม่มี JS) ใช้หลัก :target
+       - ไอคอน <a href="#xxx"> กดแล้ว URL เปลี่ยนเป็น #xxx → กล่อง id="xxx" จะแสดง (ดู style.css หัวข้อ 8)
+       - เมนูบน "ร้านแนะนำ/บทความ" ลิงก์ไป index.html#shops / #stories จึงกางกล่องให้เองได้
+       - เพิ่มไอคอนที่ 4: เพิ่ม <a class="ic" href="#ใหม่"> + <div class="panel" id="ใหม่"> แล้วเพิ่มในกฎ :has ใน style.css -->
+  <section class="dd" id="more">
+    <div class="icons">
+      <a class="ic" href="#popular" style="background:#ffd9c9" title="เมนูยอดนิยม">🔥</a>
+      <a class="ic" href="#shops" style="background:#e5d6fb" title="ร้านแนะนำ">🏪</a>
+      <a class="ic" href="#stories" style="background:#cdeedd" title="เรื่องราวอาหารไทย">📖</a>
+    </div>
+    <div class="panels">
+    <div class="panel" id="popular">
+      <h3>🔥 เมนูยอดนิยม</h3>
+      <div class="body">
+        <div class="box"><b>ผัดไทย</b><p>เส้นจันท์ผัดซอสมะขาม รสหวานเปรี้ยวเค็มกลมกล่อม</p></div>
+        <div class="box"><b>ส้มตำ</b><p>เผ็ด เปรี้ยว เค็ม หวาน กินคู่ไก่ย่างและข้าวเหนียว</p></div>
+        <div class="box"><b>ข้าวมันไก่</b><p>ข้าวหุงน้ำมันไก่ หอมนุ่ม กินกับน้ำจิ้มเต้าเจี้ยว</p></div>
+      </div>
+      <a class="close" href="#more">ปิด ✕</a>
+    </div>
+
+    <div class="panel" id="shops">
+      <h3>🏪 ร้านแนะนำ (ตัวอย่าง: เปลี่ยนเป็นร้านจริง)</h3>
+      <div class="body">
+        <div class="box"><b>ร้านที่ 1 (ตัวอย่าง)</b><p>ใส่ชื่อร้าน เมนูเด็ด ที่ตั้ง และเวลาเปิด-ปิด</p></div>
+        <div class="box"><b>ร้านที่ 2 (ตัวอย่าง)</b><p>ใส่ชื่อร้าน เมนูเด็ด ที่ตั้ง และเวลาเปิด-ปิด</p></div>
+        <div class="box"><b>ร้านที่ 3 (ตัวอย่าง)</b><p>ใส่ชื่อร้าน เมนูเด็ด ที่ตั้ง และเวลาเปิด-ปิด</p></div>
+      </div>
+      <a class="close" href="#more">ปิด ✕</a>
+    </div>
+
+    <div class="panel" id="stories">
+      <h3>📖 เรื่องราวอาหารไทย</h3>
+      <div class="body">
+        <div class="box"><b>ความสมดุลของรสชาติ</b><p>อาหารไทยมักผสมรสเปรี้ยว เผ็ด เค็ม หวานให้กลมกล่อมในจานเดียว</p></div>
+        <div class="box"><b>วัฒนธรรมกินริมทาง</b><p>สตรีทฟู้ดคือส่วนหนึ่งของชีวิตประจำวันที่ใครก็เข้าถึงได้</p></div>
+        <div class="box"><b>อาหารแต่ละภาค</b><p>ภูมิอากาศและวัตถุดิบท้องถิ่นทำให้แต่ละภาคมีรสชาติเป็นของตัวเอง</p></div>
+      </div>
+      <a class="close" href="#more">ปิด ✕</a>
+    </div>
+    </div>
+  </section>
+
+  <section class="about" id="about"><h2>👤 เกี่ยวกับเรา</h2><p class="hint" style="text-align:left">Thai Street Food Guide ช่วยให้คุณค้นพบเมนูเด็ดจากทุกภูมิภาคของประเทศไทย</p></section>
+</main>
+
+
+<!-- Pop-up เลือกภาค (CSS ล้วน ใช้หลัก :target เหมือน Dropdown)
+     - ปุ่มวงกลมคือลิงก์ href="#regions-modal" → กดแล้ว URL ลงท้าย #regions-modal → .modal ถูก :target แล้วแสดง
+     - ปิด: ลิงก์ href="#close" (ปุ่ม "ย้อนกลับ" / พื้นที่สีมืดรอบๆ / ปุ่ม Esc / ปุ่มย้อนกลับของเบราว์เซอร์)
+     - ขนาด: กว้างครึ่งจอ (50vw) ปรับที่ .modal-box ใน style.css หัวข้อ 13 -->
+<div class="modal" id="regions-modal" role="dialog" aria-modal="true" aria-label="เลือกดูอาหารตามภูมิภาค">
+  <a class="backdrop" href="#close" aria-label="ปิด"></a>
+  <div class="modal-box">
+    <div class="modal-top"><a class="back-btn" href="#close">← ย้อนกลับ</a><h2>เลือกดูอาหารตามภูมิภาค</h2></div>
+    <p class="hint">กดที่ภาคที่สนใจเพื่อดูเมนูเด่น</p>
+  <div class="map">
+      <svg viewBox="0 0 100 60">
+        <defs><marker id="ah-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="ah" d="M0 0L10 5L0 10z"/></marker></defs>
+        <line x1="39.8" y1="24.6" x2="28.9" y2="18.8" marker-end="url(#ah-m)"/>
+        <line x1="39.8" y1="35.4" x2="28.9" y2="41.2" marker-end="url(#ah-m)"/>
+        <line x1="60.2" y1="35.4" x2="71.1" y2="41.2" marker-end="url(#ah-m)"/>
+        <line x1="60.2" y1="24.6" x2="71.1" y2="18.8" marker-end="url(#ah-m)"/>
+      </svg>
+      <div class="hub">เลือก<br>ภูมิภาค</div>
+      <a class="node" href="north.html" style="left:16%;top:20%;background:var(--north)"><i>🍜</i>เหนือ</a>
+      <a class="node" href="central.html" style="left:16%;top:80%;background:var(--central)"><i>🍲</i>กลาง</a>
+      <a class="node" href="isan.html" style="left:84%;top:80%;background:var(--isan)"><i>🥗</i>อีสาน</a>
+      <a class="node" href="south.html" style="left:84%;top:20%;background:var(--south)"><i>🦐</i>ใต้</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer: ซ้ำกันทุกหน้า ถ้าแก้ต้องแก้ทุกไฟล์ .html -->
+<footer>
+  <div class="foot">
+    <div><div class="flogo"> Thai Street Food Guide</div><p>คู่มือสตรีทฟู้ดไทย ค้นพบเมนูเด็ดจากทุกภูมิภาค ตั้งแต่เหนือจรดใต้</p></div>
+    <div><h3>เมนูลัด</h3><a href="index.html">หน้าแรก</a><a href="regions.html">เมนูอาหาร</a><a href="index.html#about">เกี่ยวกับเรา</a></div>
+    <div><h3>ภูมิภาค</h3><a href="north.html">ภาคเหนือ</a><a href="central.html">ภาคกลาง</a><a href="isan.html">ภาคอีสาน</a><a href="south.html">ภาคใต้</a></div>
+  </div>
+  <div class="copy">🌿 Thai Street Food Guide &nbsp;|&nbsp; กินเที่ยวทั่วไทย 🌿</div>
+</footer>
+<script src="script.js" defer></script>
+
+
+
+</body>
+</html>

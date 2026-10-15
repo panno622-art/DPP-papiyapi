@@ -1,0 +1,27 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* ตั้งค่าพื้นฐานของ Parallax */
+.parallax {
+  height: 90%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  /* 🌟 เพิ่ม 3 บรรทัดนี้เพื่อจัดให้อยู่กลางจอเป๊ะๆ */
+  display: flex;
+  justify-content: center; /* จัดกลางแนวนอน */
+  align-items: center;
+}
+
+/* แยกรูปภาพออกมาเป็นแต่ละ Class โดยเติมจุด (.) ข้างหน้า */
+.img12 {
+    background-image: url('/home/papiyapi/seve img/งาน.png');
+    
+}
+
+

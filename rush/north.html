@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- หน้าเมนูอาหารภาคเหนือ (ไฟล์นี้ไม่ใช้ JavaScript) -->
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ภาคเหนือ | Thai Street Food Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- เมนูบน: ซ้ำกันทุกหน้า ถ้าแก้เมนูต้องแก้ทุกไฟล์ .html (ค้นหาคำว่า <nav>) | class=on = ปุ่มสีส้มของหน้าปัจจุบัน (มีได้ปุ่มเดียวต่อหน้า) -->
+<header><nav class="nav">
+  <a class="logo" href="index.html">👨‍🍳 <b>Thai</b><small>Street Food Guide</small></a>
+  <div class="links"><a href="index.html">หน้าแรก</a><a href="regions.html" class=on>เมนูอาหาร</a><a href="index.html#shops">ร้านแนะนำ</a><a href="index.html#stories">บทความ</a><a href="index.html#about">เกี่ยวกับเรา</a></div>
+</nav></header>
+<main>
+  <a class="back" href="regions.html">← เลือกภาคอื่น</a>
+  <!-- หัวหน้า: สีพื้นดึงจากตัวแปร --north ใน style.css -->
+  <div class="region-head" style="background:var(--north)"><i>🍜</i><h1>อาหารภาคเหนือ</h1><p>อาหารล้านนา รสกลมกล่อม ไม่หวานจัด เน้นสมุนไพรและเครื่องเทศ</p></div>
+  <!-- รายการเมนู: เพิ่มเมนูโดยคัดลอกบรรทัด <div class="box">…</div> -->
+  <div class="dish-grid">
+    <div class="box"><b>ข้าวซอย</b><p>แกงกะหรี่เส้นหมี่ไข่ กินกับผักดองและมะนาว</p></div>
+    <div class="box"><b>ไส้อั่ว</b><p>ไส้หมูย่างยัดสมุนไพร หอมตะไคร้ ใบมะกรูด</p></div>
+    <div class="box"><b>น้ำพริกหนุ่ม</b><p>พริกหนุ่มย่างตำ กินกับผักสดและแคบหมู</p></div>
+    <div class="box"><b>แกงฮังเล</b><p>แกงหมูสามชั้นสไตล์ล้านนา ใส่ขิงและถั่วลิสง</p></div>
+  </div>
+</main>
+<!-- Footer: ซ้ำกันทุกหน้า ถ้าแก้ต้องแก้ทุกไฟล์ .html -->
+<footer>
+  <div class="foot">
+    <div><div class="flogo">👨‍🍳 Thai Street Food Guide</div><p>คู่มือสตรีทฟู้ดไทย ค้นพบเมนูเด็ดจากทุกภูมิภาค ตั้งแต่เหนือจรดใต้</p></div>
+    <div><h3>เมนูลัด</h3><a href="index.html">หน้าแรก</a><a href="regions.html">เมนูอาหาร</a><a href="index.html#about">เกี่ยวกับเรา</a></div>
+    <div><h3>ภูมิภาค</h3><a href="north.html">ภาคเหนือ</a><a href="central.html">ภาคกลาง</a><a href="isan.html">ภาคอีสาน</a><a href="south.html">ภาคใต้</a></div>
+  </div>
+  <div class="copy">🌿 Thai Street Food Guide &nbsp;|&nbsp; กินเที่ยวทั่วไทย 🌿</div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

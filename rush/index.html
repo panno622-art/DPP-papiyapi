@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="indu.css";>
+
+<style>
+
+
+
+
+
+/* 🌟 โครงสร้าง Dropdown หลัก */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 100px; /* ปรับขนาดปุ่มให้พอดี ไม่ใหญ่เกินไป */
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropbtn:hover {
+  background-color: #3e8e41;
+}
+
+/* กล่องเมนูย่อย */
+.dropdown-content {
+  display: none; /* ซ่อนไว้ก่อนเป็นค่าเริ่มต้น */
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* คลาสสำหรับสั่งให้เมนูแสดงผล (เรียกใช้ผ่าน JavaScript) */
+.show {
+  display: block !important;
+}
+
+/* จัดส่วน Develop ให้อยู่กลางหน้าจอ */
+.develop-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<!-- เรียกใช้คลาส parallax คู่กับรูปที่ต้องการ -->
+<div class="parallax img12" style="text-align: center;"></div>
+
+<div style="height: 1500px; background-color:black; font-size:36px; padding: 50px; display: flex;
+  justify-content: center; /* จัดกลางแนวนอน */
+  align-items: center;
+
+  /* (แนะนำ) เพิ่มสีตัวหนังสือและขนาด เพื่อให้มองเห็นชัดเจนบนภาพพื้นหลัง */
+  color: white;
+  font-size: 60px;">
+Welcome to Thai Street Food Guide
+</div>
+
+<hr size="20" color="yellow">
+
+<h1 align="center">Regions of Thai Food</h1>
+
+<p text-size="50px"; align="center">ในประเทศไทยของเรานั้นมีอาหารทั้งหมด4ภูมิภาคมีดังนี้ </p>
+<pre text-size="30px"; align="center">1. Central Thailand</pre>
+
+<img src="/home/papiyapi/seve img/กลาง.jpeg" alt="Central Thailand Food" style="display: block; margin: 0 auto;">
+
+<pre text-size="30px"; align="center">2. Northern Thailand</pre>
+<img src="/home/papiyapi/seve img/เหนือ.jpeg" alt="Northern Thailand Food" style="display: block; margin: 0 auto;"  >
+
+<pre text-size="30px"; align="center">3. Northeastern Thailand</pre>
+<img src="/home/papiyapi/seve img/อีสาน.jpeg" alt="Northeastern Thailand Food" style="display: block; margin: 0 auto;"  >
+
+<pre text-size="30px"; align="center">4. Southern Thailand</pre>
+<img src="/home/papiyapi/seve img/ใต้.jpeg" alt="Southern Thailand Food" style="display: block; margin: 0 auto;"  >
+
+
+<hr>
+
+<h1 align="center">Each region has its own unique characteristics, as follows:</h1>
+<pre text-size="30px"; align="center">1. Central Thailand: Known for its rich and flavorful dishes, often featuring coconut milk and aromatic herbs.</pre>
+<pre text-size="30px"; align="center">2. Northern Thailand: Famous for its spicy and tangy flavors, with dishes like Khao Soi and Sai Oua.</pre>
+<pre text-size="30px"; align="center">3. Northeastern Thailand: Known for its bold and spicy flavors, with dishes like Som Tum and Larb.</pre>
+<pre text-size="30px"; align="center">4. Southern Thailand: Characterized by its use of fresh seafood and strong, spicy flavors, with dishes like
+
+
+
+<!-- เรียกใช้คลาส parallax คู่กับรูปที่ต้องการ -->
+<div class="parallax img12" style="text-align: center;"></div>
+
+<div style="height: 1500px; background-color:black; font-size:36px; padding: 50px; display: flex;
+  justify-content: center; /* จัดกลางแนวนอน */
+  align-items: center;
+
+  /* (แนะนำ) เพิ่มสีตัวหนังสือและขนาด เพื่อให้มองเห็นชัดเจนบนภาพพื้นหลัง */
+  color: rgb(255, 238, 0);
+  font-size: 60px;">
+let go to thaifood guide
+</div>
+
+<!-- 🌟 ส่วนของ Dropdown ที่ปรับแก้ไขแล้ว -->
+<div class="develop-container">
+
+  <div class="dropdown">
+    <!-- ใส่ onclick="toggleDropdown()" เพื่อให้ปุ่มรับคำสั่งการคลิก -->
+    <button onclick="toggleDropdown()" class="dropbtn">Click</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="home.html">click</a>
+      
+    </div>
+  </div>
+</div>
+
+<!-- 🌟 สคริปต์ควบคุมการคลิกเพื่อเปิด-ปิด Dropdown -->
+<script>
+function toggleDropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// เมื่อคลิกพื้นที่อื่นภายนอกปุ่ม ให้ปิดเมนูอัตโนมัติ
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
